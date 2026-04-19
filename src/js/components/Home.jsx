@@ -1,27 +1,59 @@
-import React from "react";
+import Navbar from "./Navbar";
+import Jumbotron from "./Jumbotron";
+import Card from "./Card";
+import rigo from "../../img/rigo-baby.jpg";
+import Footer from "./Footer";
 
-//include images into your bundle
-import rigoImage from "../../img/rigo-baby.jpg";
 
-//create your first component
 const Home = () => {
 	return (
-		<div className="text-center">
-            
+		<>
+			<Navbar />
 
-			<h1 className="text-center mt-5">Hello Rigo!</h1>
-			<p>
-				<img src={rigoImage} />
-			</p>
-			<a href="#" className="btn btn-success">
-				If you see this green button... bootstrap is working...
-			</a>
-			<p>
-				Made by{" "}
-				<a href="http://www.4geeksacademy.com">4Geeks Academy</a>, with
-				love!
-			</p>
-		</div>
+			<div className="container mt-4">
+				<Jumbotron />
+
+				<div className="row mt-4">
+					<div className="col-12 col-md-6 col-lg-3 mb-4">
+						<Card
+							image={rigo}
+							title="Primera card"
+							text="Texto de la primera card."
+							buttonText="Ver más"
+						/>
+					</div>
+
+					<div className="col-12 col-md-6 col-lg-3 mb-4">
+						<Card
+							image={rigo}
+							title="Segunda card"
+							text="Texto de la segunda card."
+							buttonText="Explorar"
+						/>
+					</div>
+
+					<div className="col-12 col-md-6 col-lg-3 mb-4">
+						<Card
+							image={rigo}
+							title="Tercera card"
+							text="Texto de la tercera card."
+							buttonText="Entrar"
+						/>
+					</div>
+
+					<div className="col-12 col-md-6 col-lg-3 mb-4">
+						<Card
+							image={rigo}
+							title="Cuarta card"
+							text="Texto de la cuarta card."
+							buttonText="Más info"
+						/>
+					</div>
+				</div>
+			</div>
+
+			<Footer />
+		</>
 	);
 };
 
